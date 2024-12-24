@@ -1,0 +1,266 @@
+body {
+    background-color: #F5F7FA;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0; /* Желательно сбрасывать базовые отступы body */
+    padding: 0;
+}
+
+.about-me-profession {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 20px;
+    color:black;
+}
+
+.myname {
+    margin-bottom: 25px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 55px;
+}
+
+/* Вместо фиксированной ширины 1200px делаем max-width */
+.main-content { 
+    width: 100%;
+    max-width: 1200px; /* Верхняя граница */
+    background-color: white;
+    padding: 100px 90px;
+    box-sizing: border-box; /* Чтобы padding учитывался внутрь блока */
+}
+
+/* Аналогично для контейнера */
+.main-cont { 
+    display: flex;
+    flex-direction: row-reverse; /* На десктопе sidebar справа */
+    background-color: white;
+    margin: 40px;
+    box-sizing: border-box;
+}
+
+/* Общие стили для текста */
+.description {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: #595959;
+    margin-bottom: 40px;
+    width: 400px; /* На десктопе можно оставить */
+}
+
+/* ... */
+
+.about-me {
+    margin-bottom: 40px;
+}
+
+.title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.my-project {
+    margin-bottom: 50px;
+}
+
+.projectlist {
+    padding-left: 20px; /* Убираем двойные нули */
+}
+
+.quartoth {
+    color: black;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.projectcont {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: #595959;
+    margin-left: 15px;
+}
+
+.project-item {
+    color: black;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.projectlink {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: #595959;
+}
+
+.worklink {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #595959;
+}
+
+.orangetext {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 20px;
+    color: #FB6D3A;
+}
+
+.contentbold {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.workli {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    margin-right: 10px;
+    color: #595959;
+    margin-left: -20px;
+}
+
+.ultragray {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 15px;
+    color: #A8A8A8;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.upslash {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: black;
+}
+
+/* Sidebar */
+.sidebar {
+    padding: 40px;
+    width: 370px;
+    background-color: #1E2939;
+    box-sizing: border-box;
+}
+
+.contact {
+    margin: 50px 0 0 40px;
+}
+
+.soft_skills {
+    margin: 50px 0 0 40px;
+}
+
+.sidebar_cont {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.conttype {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    margin-right: 8px;
+}
+
+.contlink {
+    color: #565E6A;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.orangebullet {
+    padding-left: 17px;
+}
+
+.sidebaritem {
+    color: #fb6d3a;
+}
+
+.whitetext {
+    color: white;
+}
+
+/* 
+   Адаптивная часть. 
+   Ниже медиазапрос, который срабатывает при ширине экрана <= 768px.
+   В нём: 
+   1) убираем слишком большие отступы, 
+   2) делаем колонки идти одна под другой (flex-direction: column), 
+   3) уменьшаем размеры шрифтов по необходимости.
+*/
+
+@media (max-width: 768px) {
+    .main-cont {
+        flex-direction: column;
+        margin: 0; /* Убираем большие отступы по бокам на мобилке */
+    }
+
+    .main-content {
+        width: 100%;
+        max-width: 100%; /* Чтобы заняло всю ширину экрана */
+        padding: 20px;   /* Уменьшаем внутренние отступы */
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-top: 0;
+        padding: 20px;
+    }
+
+    /* Чтобы текст тянулся на всю ширину без "обрезания" */
+    .description {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Если нужно уменьшить размер имени на мобильном */
+    .myname {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    /* Аналогично можно подправлять шрифты */
+    .title {
+        font-size: 18px;
+    }
+    
+    .workli {
+        font-size: 14px;
+        margin-left: 0;
+    }
+
+    /* и т.д. – подбирайте размеры под задачи */
+}
