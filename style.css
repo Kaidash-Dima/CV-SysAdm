@@ -29,6 +29,7 @@ body {
     background-color: white;
     padding: 100px 90px;
     box-sizing: border-box; /* Чтобы padding учитывался внутрь блока */
+    justify-content: center;
 }
 
 /* Аналогично для контейнера */
@@ -126,7 +127,7 @@ body {
 .contentbold {
     font-style: normal;
     font-weight: bold;
-    font-size: 16px;
+    /* font-size: 16px; */
     line-height: 20px;
     color: black;
     margin-bottom: 10px;
