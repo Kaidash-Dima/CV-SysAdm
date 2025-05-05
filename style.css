@@ -29,7 +29,6 @@ body {
     background-color: white;
     padding: 100px 90px;
     box-sizing: border-box; /* Чтобы padding учитывался внутрь блока */
-    justify-content: center;
 }
 
 /* Аналогично для контейнера */
@@ -39,6 +38,7 @@ body {
     background-color: white;
     margin: 40px;
     box-sizing: border-box;
+    justify-content: center;
 }
 
 /* Общие стили для текста */
